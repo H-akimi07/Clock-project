@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle, rgb(235, 41, 235), rgb(80, 2, 80));
+}
+.clock {
+  margin-top: 100px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  position: relative;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle, rgb(238, 136, 238), rgb(75, 2, 75));
+}
+.clock::before {
+  content: "";
+  width: 525px;
+  height: 525px;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(134, 243, 243), rgb(247, 239, 133));
+  box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+.number {
+  transform: rotate(calc(30deg * var(--n)));
+  position: absolute;
+  text-align: center;
+  inset: 20px;
+  font-size: 40px;
+  /* color: rgb(134, 216, 243); */
+  color: rgba(250, 230, 115, 0.849);
+  /* text-shadow: 0 0 12px rgb(250, 247, 55); */
+  text-shadow: 0 0 12px rgb(134, 216, 243);
+}
+.number b {
+  transform: rotate(calc(-30deg * var(--n)));
+  display: inline-block;
+}
+.center-dot {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  /* background-color: rgb(158, 5, 158); */
+  background-color: rgb(255, 249, 160);
+  border-radius: 50%;
+}
+.hour-hand,
+.minute-hand,
+.second-hand {
+  --rotate: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+  transform-origin: bottom;
+}
+.hour-hand {
+  width: 12px;
+  height: 130px;
+  background: linear-gradient(to top, rgb(137, 213, 238), rgb(223, 151, 195));
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.minute-hand {
+  width: 13px;
+  height: 190px;
+  background: linear-gradient(to top, rgb(134, 216, 243), rgb(247, 155, 211));
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.second-hand {
+  width: 5px;
+  height: 210px;
+  background: linear-gradient(to top, rgb(134, 216, 243), rgb(253, 120, 202));
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.BTS-Logo {
+  height: 220px;
+  width: 250px;
+}
+.me {
+  position: absolute;
+  top: 0px;
+  font-size: 80px;
+  letter-spacing: 20px;
+  font-weight: bold;
+}
+.gradient-text {
+  background: linear-gradient(45deg, rgb(146, 245, 252), rgb(247, 239, 133));
+  background-clip: text; /* For Firefox */
+  color: transparent; /* Fallback color */
+}
+
+/* background movement */
