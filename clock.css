@@ -51,7 +51,6 @@ body {
   position: absolute;
   width: 25px;
   height: 25px;
-  /* background-color: rgb(158, 5, 158); */
   background-color: rgb(255, 249, 160);
   border-radius: 50%;
 }
