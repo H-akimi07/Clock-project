@@ -28,7 +28,7 @@ body {
   height: 525px;
   position: absolute;
   border-radius: 50%;
-  background: linear-gradient(to right, rgb(134, 243, 243), rgb(247, 239, 133));
+  background: linear-gradient(to right, rgb(134, 243, 243), rgb(182, 177, 112));
   box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
